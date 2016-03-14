@@ -14,8 +14,8 @@
 
 using namespace std;
 
-void swap(int, int);
-void swap(char, char);
+void swap(int&, int&);
+void swap(char&, char&); //Passing array elements by reference
 
 int main(){
 
@@ -23,7 +23,33 @@ int main(){
 	char characterArray[10] = { 's', 'r', 'v', 'e', 'h', 'l', 'j', 'l', 'u', 'k' };
 
 	//Do the sorting using the swap function
+	//Sort from lowest to highest taking in two parameters at a time
 
+	for (int i = 0; i < 10; i++){
+		for (int j = i + 1; j < 10; j++)  //Nested loops
+		{
+			if (integerArray[i] > integerArray[j])
+			{
+				swap(integerArray[i], integerArray[j]);
+			}
+			if (characterArray[i] > characterArray[j])
+			{
+				swap(characterArray[i], characterArray[j]);
+			}
+		}
+	}
+
+	//Print out the integer array
+	for (int i = 0; i < 10; i++)
+	{
+		cout << integerArray[i] << "\t";
+	}
+
+	//Print out the character array
+	for (int i = 0; i < 10; i++)
+	{
+		cout << characterArray[i] << "\t";
+	}
 
 	system("PAUSE");
 	return 0;
