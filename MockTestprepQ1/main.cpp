@@ -19,11 +19,26 @@ void swap(char, char);
 
 int main(){
 
+	int integerArray[10] = { 1, 10, 6, 7, 2, 0, 14, 8, 50, 63 };
+	char characterArray[10] = { 's', 'r', 'v', 'e', 'h', 'l', 'j', 'l', 'u', 'k' };
+
+	//Do the sorting using the swap function
+
+
 	system("PAUSE");
 	return 0;
 }
 
 void swap(int &x, int &y)
 {
+	int temp = x; //hold value of x
+	x = y;
+	y = temp;
+}
 
+void swap(char &x, char &y)
+{
+	char temp = x; //hold value of x
+	x = y;
+	y = temp;
 }
